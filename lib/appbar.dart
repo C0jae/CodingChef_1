@@ -66,12 +66,17 @@ class MyPage extends StatelessWidget {
                   backgroundImage: AssetImage('assets/pika2.jpeg'),
                 )
               ],
-              accountName: Text('피카츄'),
-              accountEmail: Text('Pika@naver.com'),
+
+              accountName: Text('피카츄'),            // 프로필 이름
+              accountEmail: Text('Pika@naver.com'), // 프로필 이메일
+
+              // 오른쪽 하단 화살표 버튼 생성
               onDetailsPressed: () {
                 print('arrow is clicked');
               },
-              decoration: BoxDecoration(
+
+              // UserAccountsDrawerHeader의 스타일 설정
+              decoration: BoxDecoration(  // 박스 설정
                 color: Colors.red[200],
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(40.0),
@@ -80,11 +85,12 @@ class MyPage extends StatelessWidget {
               ),
             ),
 
+            // 리스트 타일 설정
             ListTile(
               leading: Icon(Icons.home,
                 color: Colors.grey[850]),
               title: Text('home'),
-              onTap: () {
+              onTap: () {   // 클릭시 기능구현
                 print('Home is clicked');
               },
               trailing: Icon(Icons.add),
