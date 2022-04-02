@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 void main() {
   runApp(MyApp());
 }
@@ -10,9 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Toast message',
+      title: 'ContainerWidget',
       theme: ThemeData(
-        primarySwatch: Colors.blue
+        primaryColor: Colors.blue
       ),
 
       home: MyPage(),
@@ -26,10 +27,21 @@ class MyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Toast message'),
-        centerTitle: true,
-      )
+      backgroundColor: Colors.blue,
+
+      body: SafeArea(
+        child: Container(
+          color: Colors.red,
+          width: 100,
+          height: 100,
+          margin: EdgeInsets.symmetric(
+            vertical: 80,
+            horizontal: 20,
+          ),
+          padding: EdgeInsets.all(20),
+          child: Text('Helo'),
+        ),
+      ),
     );
   }
 }
